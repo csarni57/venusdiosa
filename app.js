@@ -192,7 +192,7 @@ function setLang(lang) {
 
 /* ── Google Calendar Configuration ──────────────────────────── */
 const GCAL_CONFIG = {
-  clientId:   'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com',
+  clientId:   '844179844473-d114e4lff2qh8ss7eq3uun1otvmtb56c.apps.googleusercontent.com',
   calendarId: 'primary',
   scopes:     'https://www.googleapis.com/auth/calendar.events',
   timeZone:   'America/Chicago',
@@ -464,9 +464,7 @@ async function confirmBooking() {
     const startISO = buildISODateTime(state.dateISO, state.time);
     const endISO   = addMinutes(startISO, state.duration);
 
-    /* ── GOOGLE CALENDAR API CALL ──────────────────────────────
-       Uncomment after completing OAuth setup (see README.md):
-
+    
     const token = await getGoogleAccessToken();
     const response = await fetch(
       `https://www.googleapis.com/calendar/v3/calendars/${GCAL_CONFIG.calendarId}/events?sendUpdates=all`,
@@ -498,9 +496,7 @@ async function confirmBooking() {
       const err = await response.json();
       throw new Error(err.error?.message || 'Google Calendar error');
     }
-    ─────────────────────────────────────────────────────────── */
 
-    await simulateDelay(1400); // Remove this line once API is connected
 
     document.getElementById('steps').style.display = 'none';
     goStep(5);
