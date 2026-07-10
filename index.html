@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venus Diosa – Book Your Appointment</title>
+  <meta name="description" content="Venus Diosa – Luxury nail artistry. Book your appointment online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Language Toggle ── -->
+  <div class="lang-bar">
+    <button class="lang-btn active" id="btn-en" onclick="setLang('en')" aria-label="Switch to English">🇺🇸 EN</button>
+    <span class="lang-sep">|</span>
+    <button class="lang-btn" id="btn-es" onclick="setLang('es')" aria-label="Cambiar a Español">🇲🇽 ES</button>
+  </div>
+
+  <!-- ── Header ── -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo-emblem" aria-hidden="true">♀</div>
+      <p class="header-ornament" data-i18n="ornament">Nail Artistry &nbsp;·&nbsp; By Appointment Only</p>
+      <h1>Venus Diosa</h1>
+      <p class="header-tagline" data-i18n="tagline">Where every hand becomes a goddess's canvas</p>
+      <div class="gold-rule"><span></span><i>✦</i><span></span></div>
+    </div>
+  </header>
+
+  <!-- ── Main ── -->
+  <main class="main">
+
+    <!-- Steps indicator -->
+    <nav class="steps" id="steps" aria-label="Booking steps">
+      <div class="step active" data-step="1"><div class="step-num">1</div><br><span data-i18n="step1">Service</span></div>
+      <div class="step" data-step="2"><div class="step-num">2</div><br><span data-i18n="step2">Date &amp; Time</span></div>
+      <div class="step" data-step="3"><div class="step-num">3</div><br><span data-i18n="step3">Your Info</span></div>
+      <div class="step" data-step="4"><div class="step-num">4</div><br><span data-i18n="step4">Confirm</span></div>
+    </nav>
+
+    <!-- Panel 1 – Service Selection -->
+    <section class="panel active" id="panel1">
+      <h2 class="section-label" data-i18n="chooseService">Choose your service</h2>
+      <div class="service-grid" id="service-grid">
+
+        <article class="service-card" data-service-en="Classic Manicure" data-service-es="Manicura Clásica" data-duration="45" data-price="35" tabindex="0" role="button" aria-pressed="false">
+          <div class="service-icon">✦</div>
+          <div class="service-name" data-i18n="svc1Name">Classic Manicure</div>
+          <div class="service-meta" data-i18n="svc1Meta">Shape, buff &amp; polish · 45 min</div>
+          <div class="service-price">$35</div>
+        </article>
+
+        <article class="service-card" data-service-en="Gel Manicure" data-service-es="Manicura de Gel" data-duration="60" data-price="55" tabindex="0" role="button" aria-pressed="false">
+          <div class="service-icon">✦</div>
+          <div class="service-name" data-i18n="svc2Name">Gel Manicure</div>
+          <div class="service-meta" data-i18n="svc2Meta">Long-lasting gel colour · 60 min</div>
+          <div class="service-price">$55</div>
+        </article>
+
+        <article class="service-card" data-service-en="Acrylic Full Set" data-service-es="Juego Completo Acrílico" data-duration="90" data-price="75" tabindex="0" role="button" aria-pressed="false">
+          <div class="service-icon">✦</div>
+          <div class="service-name" data-i18n="svc3Name">Acrylic Full Set</div>
+          <div class="service-meta" data-i18n="svc3Meta">Full acrylic extensions · 90 min</div>
+          <div class="service-price">$75</div>
+        </article>
+
+        <article class="service-card featured" data-service-en="Luxury Nail Art Set" data-service-es="Set de Arte de Uñas de Lujo" data-duration="210" data-price="130" tabindex="0" role="button" aria-pressed="false">
+          <div class="service-badge" data-i18n="badge">Signature</div>
+          <div class="service-icon">♀</div>
+          <div class="service-name" data-i18n="svc4Name">Luxury Nail Art Set</div>
+          <div class="service-meta" data-i18n="svc4Meta">3D florals, rhinestones &amp; glassy finish · 210 min</div>
+          <div class="service-price" data-i18n="svc4Price">from $130</div>
+        </article>
+
+        <article class="service-card" data-service-en="Nail Art Add-on" data-service-es="Arte de Uñas Adicional" data-duration="30" data-price="20" tabindex="0" role="button" aria-pressed="false">
+          <div class="service-icon">✦</div>
+          <div class="service-name" data-i18n="svc5Name">Nail Art Add-on</div>
+          <div class="service-meta" data-i18n="svc5Meta">Custom designs · +30 min</div>
+          <div class="service-price" data-i18n="svc5Price">from $20</div>
+        </article>
+
+        <article class="service-card" data-service-en="Spa Pedicure" data-service-es="Pedicura de Spa" data-duration="60" data-price="65" tabindex="0" role="button" aria-pressed="false">
+          <div class="service-icon">✦</div>
+          <div class="service-name" data-i18n="svc6Name">Spa Pedicure</div>
+          <div class="service-meta" data-i18n="svc6Meta">Soak, scrub &amp; polish · 60 min</div>
+          <div class="service-price">$65</div>
+        </article>
+
+        <article class="service-card" data-service-en="Gel Removal" data-service-es="Remoción de Gel" data-duration="30" data-price="20" tabindex="0" role="button" aria-pressed="false">
+          <div class="service-icon">✦</div>
+          <div class="service-name" data-i18n="svc7Name">Gel Removal</div>
+          <div class="service-meta" data-i18n="svc7Meta">Safe soak-off · 30 min</div>
+          <div class="service-price">$20</div>
+        </article>
+
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-gold" id="step1-next" disabled onclick="goStep(2)" data-i18n="continue">Continue</button>
+      </div>
+    </section>
+
+    <!-- Panel 2 – Date & Time -->
+    <section class="panel" id="panel2">
+      <h2 class="section-label" data-i18n="pickDate">Pick a date</h2>
+      <div class="cal-header">
+        <button class="cal-nav" id="prev-month" aria-label="Previous month">&#8249;</button>
+        <div class="cal-month" id="cal-month-label" aria-live="polite"></div>
+        <button class="cal-nav" id="next-month" aria-label="Next month">&#8250;</button>
+      </div>
+      <div class="cal-grid" id="cal-grid" role="grid"></div>
+
+      <h2 class="section-label mt-2" data-i18n="selectTime">Select a time</h2>
+      <p id="schedule-note" class="schedule-note"></p>
+      <div class="time-grid" id="time-grid" role="group"></div>
+
+      <div class="btn-row">
+        <button class="btn btn-outline" onclick="goStep(1)" data-i18n="back">Back</button>
+        <button class="btn btn-gold" id="step2-next" disabled onclick="goStep(3)" data-i18n="continue">Continue</button>
+      </div>
+    </section>
+
+    <!-- Panel 3 – Client Info -->
+    <section class="panel" id="panel3">
+      <h2 class="section-label" data-i18n="yourDetails">Your details</h2>
+
+      <div class="form-grid">
+        <div class="form-row">
+          <label for="fname" data-i18n="firstName">First name</label>
+          <input type="text" id="fname" name="fname" placeholder="Isabella" autocomplete="given-name" required />
+        </div>
+        <div class="form-row">
+          <label for="lname" data-i18n="lastName">Last name</label>
+          <input type="text" id="lname" name="lname" placeholder="Rivera" autocomplete="family-name" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="email" data-i18n="emailLabel">Email address</label>
+        <input type="email" id="email" name="email" placeholder="isabella@email.com" autocomplete="email" required />
+      </div>
+
+      <div class="form-row">
+        <label for="phone" data-i18n="phoneLabel">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" required />
+      </div>
+
+      <div class="form-row">
+        <label for="notes" data-i18n="notesLabel">Notes for your nail artist (optional)</label>
+        <textarea id="notes" name="notes" data-i18n-placeholder="notesPlaceholder" placeholder="Colour preferences, allergies, inspo photos, special requests..."></textarea>
+      </div>
+
+      <div class="privacy-note" id="privacy-note-3">
+        <strong>🔒 <span data-i18n="privacyTitle">Your privacy is protected.</span></strong><br>
+        <span data-i18n="privacyBody">Your personal information is used only to confirm your appointment at Venus Diosa. It is never shared with third parties, never displayed publicly, and is stored securely. Only your nail artist can view your booking details.</span>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-outline" onclick="goStep(2)" data-i18n="back">Back</button>
+        <button class="btn btn-gold" id="step3-next" onclick="validateStep3()" data-i18n="reviewBooking">Review booking</button>
+      </div>
+    </section>
+
+    <!-- Panel 4 – Review & Confirm -->
+    <section class="panel" id="panel4">
+      <h2 class="section-label" data-i18n="reviewConfirm">Review &amp; confirm</h2>
+      <div class="summary-box" id="summary-box" aria-live="polite"></div>
+
+      <div class="privacy-note">
+        <span data-i18n="confirmPrivacy">By confirming, your appointment will be added to the Venus Diosa private calendar. A confirmation will be sent to your email. Your details remain confidential.</span>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-outline" onclick="goStep(3)" data-i18n="editDetails">Edit details</button>
+        <button class="btn btn-gold" id="confirm-btn" onclick="confirmBooking()" data-i18n="confirmBooking">Confirm booking</button>
+      </div>
+    </section>
+
+    <!-- Panel 5 – Confirmation -->
+    <section class="panel" id="panel5">
+      <div class="confirm-box">
+        <div class="confirm-icon" aria-hidden="true">♀</div>
+        <h2 data-i18n="bookedTitle">You're booked, goddess!</h2>
+        <p data-i18n="bookedBody">Your appointment at <strong>Venus Diosa</strong> is confirmed.<br>A confirmation email is on its way to you.</p>
+        <div class="gcal-note" data-i18n="calNote">
+          📅 Your appointment has been added to our private calendar.<br>
+          A private calendar invite has been emailed to you.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Venus Diosa</span>
+      <span class="footer-sep">·</span>
+      <span data-i18n="footerService">Luxury Nail Artistry</span>
+      <span class="footer-sep">·</span>
+      <span data-i18n="footerAppt">By Appointment Only</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
